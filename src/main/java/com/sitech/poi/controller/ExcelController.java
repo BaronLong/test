@@ -26,7 +26,7 @@ public class ExcelController {
 	@RequestMapping(value = "batchImport")  
 	public String batchImportUserKnowledge(@RequestParam(value="filename") MultipartFile file,  
 	        HttpServletRequest request,HttpServletResponse response,HttpSession session) throws IOException{  
-	  
+	  	private int i = 0;
 	    //判断文件是否为空  
 	    if(file==null){  
 	     session.setAttribute("msg","文件不能为空！");  
